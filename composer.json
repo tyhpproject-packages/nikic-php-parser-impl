@@ -1,0 +1,41 @@
+{
+    "name": "tyhpdef/nikic-php-parser-impl",
+    "description": "Implementation package for tyhpdef/nikic-php-parser. Require tyhpdef/nikic-php-parser, not this package.",
+    "keywords": [
+        "dev",
+        "static analysis",
+        "internal"
+    ],
+    "type": "library",
+    "license": "Apache-2.0",
+    "version": "5.9.0.0",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "tyhp": {
+            "interopContractVersion": 1,
+            "php-version": ">=8.2",
+            "require": {
+                "tyhpdef/php": "@dev"
+            },
+            "package": {
+                "include": [
+                    "./_tyhpdef/*.tyhpdef",
+                    "./_tyhpdef/extensions/*.tyhpdef"
+                ],
+                "overlay": [
+                    "./_tyhpdef/overlays/stubs/*.tyhpdef",
+                    "./_tyhpdef/overlays/*.tyhpdef"
+                ]
+            },
+            "public": "tyhpdef/nikic-php-parser"
+        }
+    },
+    "require": {
+        "php": ">=8.2",
+        "nikic/php-parser": "5.9.0"
+    },
+    "require-dev": {
+        "tyhpdef/php": "@dev"
+    }
+}
